@@ -14,4 +14,4 @@ class UserLicense(models.Model):
 	author = models.CharField(max_length=500)
 	year = models.DateField()
 	organisation = models.CharField(max_length=500)
-	short_url = models.CharField(max_length=5)
+	short_url = models.CharField(max_length=5, blank=True, unique=True)
