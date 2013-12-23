@@ -77,7 +77,7 @@ USE_L10N = True
 USE_TZ = True
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'webapp/templates'),
+    os.path.join(BASE_DIR,  'webapp/templates/'),
 )
 
 

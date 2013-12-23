@@ -1,23 +1,14 @@
 from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.views.generic.edit import FormView
 
 from models import License
 from forms import *
 
-def home(request):
-	"""
-	home page
-	"""
+class HomeView(FormView):
+    template_name = "index.html"
+    form_class = UserLicenseForm
 
-	licenses = License.objects.all()
-	form = UserLicenseForm()
-	return render_to_response('index.html', {'licenses': licenses, 'form': form})
-
-#def create_license(request):
-	#"""
-	#create license view
-	#"""
-
-	#if request.POST:
-
-
-	# license_selector = {'mit'}
+    def form_valid(self, form):
+        form.save()
+        return super(HomeView, self).form_valid(form)
