@@ -9,6 +9,9 @@ class HomeView(FormView):
     template_name = "index.html"
     form_class = UserLicenseForm
 
+    #def get_success_url(self):
+    #    self.
+
     def form_valid(self, form):
         form.save()
         return super(HomeView, self).form_valid(form)

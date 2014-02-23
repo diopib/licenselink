@@ -34,17 +34,3 @@ class UserLicenseForm(forms.ModelForm):
 
     class Meta:
         model = UserLicense
-        fields = ['license_type', 'author', 'year', 'organisation']
-
-    def save(self):
-        char_set = string.ascii_lowercase + string.digits
-        su = ''.join(random.sample(char_set * 6, 6))
-
-        try:
-            while True:
-                UserLicense.objects.get(short_url=su)
-                su = ''.join(random.sample(char_set * 6, 6))
-        except UserLicense.DoesNotExist:
-            self.short_url = su
-
-        super(UserLicenseForm, self).save()
