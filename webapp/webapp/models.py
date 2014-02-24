@@ -24,3 +24,10 @@ class UserLicense(models.Model):
             char_set = string.ascii_lowercase + string.digits
             self.short_url = ''.join(random.sample(char_set * 6, 6))
             super(UserLicense, self).save(force_insert, force_update, using, update_fields)
+
+    def display_license(self):
+        conditional = {1: (self.year, self.author),
+                       2: (self.year, self.author),
+                       3: (self.year, self.author),
+                       4: (self.year, self.author)}
+        return self.license_type.text.format(*conditional[self.license_type.id])
