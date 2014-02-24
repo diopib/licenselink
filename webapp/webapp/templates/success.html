@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Success</title>
-</head>
-<body>
-    {{ short_url }}
-</body>
-</html>
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Congratulations!</h1>
+      </div>
+          <p class="lead">{% trans 'Your license is created and is available at' %}<a href="http://localhost:8000/{{ short_url }}">&nbsp;http://localhost:8000/{{ short_url }}</a></p>
+    </div>
+{% endblock %}
+

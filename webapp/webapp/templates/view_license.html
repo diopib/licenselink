@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>View License</title>
-</head>
-<body>
-    {{ license }}
-</body>
-</html>
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>{{ license_name }}</h1>
+      </div>
+          <p>{{ license }}</p>
+    </div>
+{% endblock %}
+

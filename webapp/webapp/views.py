@@ -21,4 +21,5 @@ class ViewLicense(TemplateView):
         context = super(ViewLicense, self).get_context_data(**kwargs)
         u_license = UserLicense.objects.get(short_url=self.kwargs['short_url'])
         context['license'] = u_license.display_license()
+        context['license_name'] = u_license.license_type.name
         return context
