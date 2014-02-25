@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webapp',
+    'licenselink',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'webapp.urls'
+ROOT_URLCONF = 'licenselink.urls'
 
-WSGI_APPLICATION = 'webapp.wsgi.application'
+WSGI_APPLICATION = 'licenselink.wsgi.application'
 
 
 # Database
@@ -79,7 +79,7 @@ USE_L10N = True
 USE_TZ = True
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'webapp/templates/'),
+    os.path.join(BASE_DIR, 'licenselink/templates/'),
 )
 
 
@@ -87,7 +87,7 @@ TEMPLATE_DIRS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,  'webapp/static'),
+    os.path.join(BASE_DIR, 'licenselink/static'),
 )
 
 STATIC_URL = '/static/'
