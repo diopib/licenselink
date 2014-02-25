@@ -1,7 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
-from forms import *
+from models import UserLicense
 
 class HomeView(CreateView):
     template_name = "index.html"
