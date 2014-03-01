@@ -63,7 +63,16 @@ WSGI_APPLICATION = 'licenselink.wsgi.application'
 #     }
 # }
 
-DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'NAME': 'licenselink_db', 'HOST': 'localhost', 'USER': 'ibrahim', 'PASSWORD': 'blabla', 'PORT': None}}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd5obogn833iehu',
+        'HOST': 'ec2-54-204-41-178.compute-1.amazonaws.com',
+        'USER': 'vigutkddqohrux',
+        'PASSWORD': 'MNliub0JcPxMCLI1NY0UgZ8-A_',
+        'PORT': 5432
+    }
+}
 
 
 # Internationalization
