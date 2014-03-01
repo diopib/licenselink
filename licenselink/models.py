@@ -16,7 +16,7 @@ class UserLicense(models.Model):
     author = models.CharField(max_length=500)
     year = models.IntegerField(max_length=4)
     organisation = models.CharField(max_length=500)
-    short_url = models.CharField(max_length=5, blank=True, unique=True, editable=False)
+    short_url = models.CharField(max_length=6, blank=True, unique=True, editable=False)
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
