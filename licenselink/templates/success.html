@@ -6,7 +6,7 @@
       <div class="page-header">
         <h1>Congratulations!</h1>
       </div>
-          <p class="lead">{% trans 'Your license is created and is available at' %}<a href="http://localhost:8000/{{ short_url }}">&nbsp;http://localhost:8000/{{ short_url }}</a></p>
+          <p class="lead">{% trans 'Your license is created and is available' %}<a href="{% url 'view_license' short_url %}">&nbsp;Here</a></p>
     </div>
 {% endblock %}
 
