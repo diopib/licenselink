@@ -66,10 +66,10 @@ WSGI_APPLICATION = 'licenselink.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd5obogn833iehu',
-        'HOST': 'ec2-54-204-41-178.compute-1.amazonaws.com',
-        'USER': 'vigutkddqohrux',
-        'PASSWORD': 'MNliub0JcPxMCLI1NY0UgZ8-A_',
+        'NAME': 'dd0orjc2pt3s6g',
+        'HOST': 'ec2-54-204-41-249.compute-1.amazonaws.com',
+        'USER': 'zzvgrlptcdbkcy',
+        'PASSWORD': 'dDfSrZxTE8cj3NF4h5U4GyEl4y',
         'PORT': 5432
     }
 }
